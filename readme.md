@@ -4,17 +4,17 @@
 
 1. **rclone 설정**: `rclone config`로 구글 드라이브를 `gdrive` 등 원하는 이름으로 연결해 두세요. 업로드 대상 경로는 아래 **공유 폴더** 안내를 참고해 `GDRIVE_REMOTE`에 맞춥니다.
 2. **Git Bash**: 윈도우 파워쉘 대신 **Git Bash**에서 실행해야 합니다.
-3. **API 키**: [AI-Hub 마이페이지](https://aihub.or.kr/)에서 발급받은 개인 API 키가 필요합니다.
+3. **API 키**: AI-Hub 마이페이지에서 발급받은 개인 API 키가 필요합니다.
 
 ### 구글 드라이브 공유 폴더에 올릴 때
 
-팀에서 **공유만 받은 폴더**에 그대로 경로를 쓰기 어려운 경우가 많습니다. 웹 구글 드라이브에서 해당 공유 폴더를 연 다음 **「내 드라이브에 바로가기 추가」**(UI 문구는 버전에 따라 다를 수 있음)로 **자신의 드라이브** 쪽에 바로가기를 만들어 두세요. 그다음 `upload_all.sh`의 `GDRIVE_REMOTE`에는 **그 바로가기가 내 드라이브 안에서 차지하는 경로**를 적습니다. 예: `gdrive:상위폴더/…/바로가기폴더명`. rclone `listremotes` / `lsd` 등으로 실제로 보이는 경로와 맞는지 확인하면 안전합니다. **공유 드라이브(팀 드라이브)**만 쓰도록 rclone remote를 따로 만든 경우에는 그 remote 이름과 해당 경로 규칙을 따르면 됩니다.
+https://www.clien.net/service/board/lecture/15976375
 
 ## 📁 파일 구성
 
 작업 디렉토리(예: `D:/dataset`)에 아래 파일들이 있어야 합니다.
 
-- `aihubshell`: AI-Hub 제공 다운로드 스크립트 (홈페이지에서 다운로드)
+- `aihubshell`: AI-Hub 제공 다운로드 스크립트 ([홈페이지에서 다운로드](https://aihub.or.kr/))
 - `upload_all.sh`: 자동화 통합 스크립트
 - `.env`: API 키 설정
 - `rclone`: (시스템 환경변수 `Path`에 등록되어 있어야 함)
