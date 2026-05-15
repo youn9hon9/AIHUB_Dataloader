@@ -1,9 +1,19 @@
 #!/bin/bash
 
+# 프로젝트 루트의 .env 로드 (이 스크립트: .../sctipts/aihub_uploader/upload_all.sh 기준 상위 두 단계)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+if [ -f "$REPO_ROOT/.env" ]; then
+  set -a
+  # shellcheck source=/dev/null
+  source "$REPO_ROOT/.env"
+  set +a
+fi
+
 # 환경 변수 설정
-: "${AIHUB_API_KEY:?AIHUB_API_KEY 환경 변수를 설정하세요}"
+: "${AIHUB_API_KEY:?AIHUB_API_KEY를 설정하세요. 프로젝트 루트($REPO_ROOT)에 .env를 두거나 export 하세요}"
 DATASET_KEY="171"
-GDRIVE_REMOTE="gdrive:Colab Notebooks/26_Deeplearning/딥러닝 팀플/데이터/dataset/이상행동 CCTV 영상"
+GDRIVE_REMOTE="gdrive:Colab Notebooks/딥러닝 팀플/01_Data이상행동 CCTV 영상"
 LOCAL_DIR="19.이상행동CCTV"
 
 # 다운로드할 파일 키 리스트

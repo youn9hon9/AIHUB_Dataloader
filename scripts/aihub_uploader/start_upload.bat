@@ -1,11 +1,8 @@
 @echo off
-echo ======================================================
-echo   AI-Hub 데이터 자동 업로드 프로세스를 시작합니다 (Git Bash)
-echo ======================================================
 
 :: 1. 작업 디렉토리로 이동 (D드라이브)
 d:
-cd D:\dataset
+cd D:\CCTV_Anomaly_Detection\sctipts\aihub_uploader
 
 :: 2. Git Bash를 실행하여 우리 스크립트(upload_all.sh)를 가동
 :: -log 옵션을 통해 별도의 창에서 로그를 실시간으로 보여줍니다.
