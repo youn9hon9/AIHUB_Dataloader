@@ -13,7 +13,7 @@ fi
 # 환경 변수 설정
 : "${AIHUB_API_KEY:?AIHUB_API_KEY를 설정하세요. 프로젝트 루트($REPO_ROOT)에 .env를 두거나 export 하세요}"
 DATASET_KEY="171"
-GDRIVE_REMOTE="gdrive:Colab Notebooks/딥러닝 팀플/01_Data이상행동 CCTV 영상"
+GDRIVE_REMOTE="gdrive:딥러닝 팀플/01_Data/이상행동 CCTV 영상"
 LOCAL_DIR="19.이상행동CCTV"
 
 # 다운로드할 파일 키 리스트
