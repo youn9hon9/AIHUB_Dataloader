@@ -1,0 +1,14 @@
+# Workspace (scripts/config, viz)
+numpy>=1.24.4
+opencv-python>=4.8.0
+matplotlib>=3.7.0
+tqdm>=4.65.0
+scikit-learn>=1.2.0
+PyYAML>=6.0
+einops>=0.6.0
+timm>=0.9.0
+av>=10.0.0
+decord>=0.6.0
+
+# MTFL feature extraction (Colab — install separately per OpenMMLab guide):
+# mmcv-full, mmaction2, torch
